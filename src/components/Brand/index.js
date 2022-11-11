@@ -1,9 +1,10 @@
 import React from "react";
 
-function Brand(props) {
+// eslint-disable-next-line react/prop-types
+function Brand({ logo }) {
   return (
     <div>
-      <h1>soy un h1</h1>
+      <img src={logo} alt="logo xcaret" />
     </div>
   );
 }

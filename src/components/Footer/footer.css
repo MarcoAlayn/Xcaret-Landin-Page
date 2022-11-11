@@ -8,6 +8,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: black;
+  background: var(--black-color);
   color: var(--white-color);
 }

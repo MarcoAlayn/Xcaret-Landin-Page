@@ -1,35 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import CallToAction from "../../components/CallToAction";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Legals from "../../components/Legals";
-import "./landing.css";
 import Footer from "../../components/Footer";
+import { setSpanish, apiData } from "../../redux/actions";
+import "./landing.css";
 
 function Landing() {
+  const dispatch = useDispatch();
+  const lang = useSelector((state) => state.lang);
+  const allData = useSelector((state) => state.allData);
+
+  useEffect(() => {
+    dispatch(apiData());
+    if (!lang.length) dispatch(setSpanish());
+  }, [dispatch]);
+
   return (
     <div className="landingContainer">
-      <nav className="nav">
-        <Navbar />
-      </nav>
-      <div className="hero">
-        <Hero />
-      </div>
-      <div className="callCallToAction-One">
-        <CallToAction orientatición={"imgIZQ"} />
-      </div>
-      <div className="callCallToAction-Two">
-        <CallToAction orientatición={"imgDER"} />
-      </div>
-      <div className="callCallToAction-Three">
-        <CallToAction orientatición={"imgIZQ"} />
-      </div>
-      <div className="legals">
-        <Legals />
-      </div>
-      <footer className="footer">
-        <Footer />
-      </footer>
+      {allData ? (
+        <>
+          <nav className="nav">
+            <Navbar />
+          </nav>
+          <div className="hero">
+            <Hero />
+          </div>
+          <div className="callCallToAction-One">
+            <CallToAction orientatición={"imgIZQ"} />
+          </div>
+          <div className="callCallToAction-Two">
+            <CallToAction orientatición={"imgDER"} />
+          </div>
+          <div className="callCallToAction-Three">
+            <CallToAction orientatición={"imgIZQ"} />
+          </div>
+          <div className="legals">
+            <Legals />
+          </div>
+          <footer className="footer">
+            <Footer />
+          </footer>
+        </>
+      ) : (
+        <h1>cargando</h1>
+      )}
     </div>
   );
 }

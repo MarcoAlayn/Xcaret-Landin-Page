@@ -1,0 +1,2 @@
+GET https://raw.githubusercontent.com/javialcocer/test-json/main/data.json 
+Content-Type: application/json
