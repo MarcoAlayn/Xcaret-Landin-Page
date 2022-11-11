@@ -1,41 +1,62 @@
 import React from "react";
 import "./footer.css";
+import { useSelector } from "react-redux";
 
 function Footer() {
+  const lang = useSelector((state) => state.lang);
+  const allData = useSelector((state) => state.allData);
+
+  const contactCenter =
+    lang === "es"
+      ? allData?.es?.prefooter?.contactCenter
+      : allData?.en?.prefooter?.contactCenter;
+
+  const numbers =
+    lang === "es"
+      ? allData?.es?.prefooter?.numbers
+      : allData?.en?.prefooter?.numbers;
+
+  const social =
+    lang === "es"
+      ? allData?.es?.prefooter?.social
+      : allData?.en?.prefooter?.social;
+
+  const arraySocial = social ? Object.entries(social) : null;
+
+  const footer = lang === "es" ? allData?.es?.footer : allData?.en?.footer;
+
   return (
     <div className="footerContainer">
-      <p>ATENCIÓN A CLIENTES</p>
-      <span>reservaciones@hotelxcaret.com</span>
+      <p>{contactCenter?.title}</p>
+      <span>{contactCenter?.email} </span>
+
       <div className="numbersNsocial">
         <div className="contacts">
-          <p className="one">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="two">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="three">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="four">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="five">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="six">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="seven">MÉXICO</p>
-          <span>018000000000</span>
-          <p className="eight">MÉXICO</p>
-          <span>018000000000</span>
-          <p>MÉXICO</p>
+          {numbers?.map((e) => {
+            return (
+              <p key={e.name}>
+                {e.name}
+                <span>{e.number}</span>
+              </p>
+            );
+          })}
         </div>
+
         <div className="social">
-          <p>imagen</p>
-          <p>imagen</p>
-          <p>imagen</p>
+          <a href={arraySocial?.[0][1]}>{arraySocial?.[0][0]}</a>
+          <a href={arraySocial?.[1][1]}>{arraySocial?.[1][0]}</a>
+          <a href={arraySocial?.[2][1]}>{arraySocial?.[2][0]}</a>
         </div>
       </div>
+
       <div className="termsUse">
-        <p>©Copyright Experiencias Xcaret Hotel S.A.P.I. de C.V.</p>
-        <p>Términos de Uso</p>
-        <p>Aviso de Privacidad </p>
+        <p>{footer?.copy}</p>
+        <p>
+          <a href={footer?.links[0].href}>{footer?.links[0].tittle}</a>
+        </p>
+        <p>
+          <a href={footer?.links[1].href}>{footer?.links[1].tittle}</a>
+        </p>
       </div>
     </div>
   );

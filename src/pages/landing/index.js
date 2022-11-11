@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { setSpanish, apiData } from "../../redux/actions";
 import CallToAction from "../../components/CallToAction";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Legals from "../../components/Legals";
 import Footer from "../../components/Footer";
-import { setSpanish, apiData } from "../../redux/actions";
 import "./landing.css";
 
 function Landing() {
