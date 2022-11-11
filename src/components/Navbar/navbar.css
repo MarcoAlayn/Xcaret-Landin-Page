@@ -1,0 +1,17 @@
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+}
+.navbarContainer .brand {
+  background: violet;
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+.navbarContainer .contact {
+  background: blue;
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+}

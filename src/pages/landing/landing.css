@@ -1,0 +1,19 @@
+.landingContainer {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "navb navb navb navb navb navb navb navb navb navb navb navb"
+    "hero hero hero hero hero hero hero hero hero hero hero hero ";
+}
+
+.landingContainer .nav {
+  grid-area: navb;
+  background: red;
+  height: 100px;
+}
+
+.landingContainer .hero {
+  grid-area: hero;
+  background: green;
+}

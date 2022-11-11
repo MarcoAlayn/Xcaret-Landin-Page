@@ -1,1 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  max-width: 1440px;
+  margin: auto 100px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0095d9;
+  --secondary-color: #214387;
+  --white-color: white;
+  --black-color: #111;
+
+  --primary-font: "Lato", sans-serif;
+
+  --logo-fontSize: 36px;
+  --font-size-h1: 44px;
+  --font-size-h2: 13px;
+  --font-size-h3: 36px;
+  --font-size-text: 26px;
+  --font-size-menu: 18px;
+  --font-size-slogan: 80px;
+  --font-size-button: 18px;
+
+  --font-weight-h1: 800;
+  --font-weight-h2: 400;
+  --font-weight-h3: 400;
+  --font-weight-text: 400;
+  --font-weight-menu: 600;
+  --font-weight-slogan: 400;
+  --font-weight-button: 600;
+}

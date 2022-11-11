@@ -1,0 +1,14 @@
+.heroContainer {
+  background: gray;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heroContainer .heroSubContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
