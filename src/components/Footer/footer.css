@@ -1,0 +1,13 @@
+.footerContainer .numbersNsocial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footerContainer .termsUse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: black;
+  color: var(--white-color);
+}

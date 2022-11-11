@@ -4,7 +4,12 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
     "navb navb navb navb navb navb navb navb navb navb navb navb"
-    "hero hero hero hero hero hero hero hero hero hero hero hero ";
+    "hero hero hero hero hero hero hero hero hero hero hero hero"
+    "cta1 cta1 cta1 cta1 cta1 cta1 cta1 cta1 cta1 cta1 cta1 cta1"
+    "cta2 cta2 cta2 cta2 cta2 cta2 cta2 cta2 cta2 cta2 cta2 cta2"
+    "cta3 cta3 cta3 cta3 cta3 cta3 cta3 cta3 cta3 cta3 cta3 cta3"
+    "lgls lgls lgls lgls lgls lgls lgls lgls lgls lgls lgls lgls"
+    "foot foot foot foot foot foot foot foot foot foot foot foot";
 }
 
 .landingContainer .nav {
@@ -16,4 +21,28 @@
 .landingContainer .hero {
   grid-area: hero;
   background: green;
+}
+
+.landingContainer .callCallToAction-One {
+  grid-area: cta1;
+  background: yellow;
+}
+
+.landingContainer .callCallToAction-Two {
+  grid-area: cta2;
+  background: yellowgreen;
+}
+.landingContainer .callCallToAction-Three {
+  grid-area: cta3;
+  background: purple;
+}
+
+.landingContainer .legals {
+  grid-area: lgls;
+  background: chocolate;
+}
+
+.landingContainer .footer {
+  grid-area: foot;
+  background: darkslategrey;
 }

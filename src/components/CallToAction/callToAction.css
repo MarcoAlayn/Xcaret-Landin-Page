@@ -1,0 +1,32 @@
+.imgDER,
+.imgIZQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.imgDER {
+  flex-direction: row;
+}
+
+.imgIZQ {
+  flex-direction: row-reverse;
+}
+
+.imgDER .carousel,
+.imgIZQ .carousel {
+  overflow: hidden;
+  max-width: 50%;
+  background: red;
+}
+
+.imgDER .info,
+.imgIZQ .info {
+  max-width: 50%;
+  background: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
