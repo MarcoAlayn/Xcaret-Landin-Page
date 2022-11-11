@@ -1,3 +1,4 @@
 {
-node_modules
+node_modules,
+/home/marco/Documentos/xcaret/src/components/Legals/index.js
 }

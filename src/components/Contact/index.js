@@ -9,7 +9,7 @@ function Contact({ contact, lang, currency }) {
       <a href="#">{lang?.title}</a>
       <form>
         {currency?.map((e) => {
-          return <option key={e?.index}>{e}</option>;
+          return <option key={e}>{e}</option>;
         })}
       </form>
     </div>

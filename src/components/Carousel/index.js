@@ -1,9 +1,24 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useEffect } from "react";
 import "./carousel.css";
 import { ReactComponent as LeftArrow } from "../../assets/iconmonstr-angel-left-thin.svg";
 import { ReactComponent as RightArrow } from "../../assets/iconmonstr-angel-right-thin.svg";
+import { useSelector } from "react-redux";
 
-function Carousel() {
+function Carousel({ img }) {
+  const lang = useSelector((state) => state.lang);
+  const allData = useSelector((state) => state.allData);
+
+  const espCarousel = allData?.es?.carousel?.desktop;
+  const engCarousel = allData?.en?.carousel?.desktop;
+
+  const image0ne = lang === "es" ? espCarousel?.[0] : engCarousel?.[0];
+  const imageTwo = lang === "es" ? espCarousel?.[1] : engCarousel?.[1];
+  const imageThree = lang === "es" ? espCarousel?.[2] : engCarousel?.[2];
+  const imageFour = lang === "es" ? espCarousel?.[3] : engCarousel?.[3];
+  const imageFive = lang === "es" ? espCarousel?.[4] : engCarousel?.[4];
+  const imageSix = lang === "es" ? espCarousel?.[5] : engCarousel?.[5];
+
   const slideshow = useRef(null);
   const intervaloSlideshow = useRef(null);
 
@@ -70,40 +85,39 @@ function Carousel() {
       <div className="contenedorSlideshow" ref={slideshow}>
         <div className="slide">
           <a href="#">
-            <img src="" alt="imagen 1" />
+            <img src={image0ne?.src} alt={image0ne?.alt} />
           </a>
-          <p className="textoSlide">
-            JPMorgan Chase elige Tableau para ofrecer análisis de autoservicio y
-            seguir el vertiginoso ritmo de los cambios en el sector
-          </p>
+          <p className="textoSlide">{image0ne?.alt}</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src="" alt="imagen 2" />
+            <img src={imageTwo?.src} alt={imageTwo?.alt} />
           </a>
-          <p className="textoSlide">
-            Whole Foods Market democratiza el acceso a los datos en sus 460
-            tiendas para 18 000 empleados gracias a Tableau
-          </p>
+          <p className="textoSlide">{imageTwo?.alt}</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src="" alt="imagen 3" />
+            <img src={imageThree?.src} alt={imageThree?.alt} />
           </a>
-          <p className="textoSlide">
-            Red Hat adopta el Blueprint de Tableau y Tableau Online, y
-            profundiza en la cultura de datos con más de 4500 empleados en menos
-            de un año
-          </p>
+          <p className="textoSlide">{imageThree?.alt}</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src="" alt="imagen 4" />
+            <img src={imageFour?.src} alt={imageFour?.alt} />
           </a>
-          <p className="textoSlide">
-            Verizon usa Tableau para reducir las llamadas de soporte en un 43 %
-            y así mejorar la experiencia del cliente
-          </p>
+          <p className="textoSlide">{imageFour?.alt}</p>
+        </div>
+        <div className="slide">
+          <a href="#">
+            <img src={imageFive?.src} alt={imageFive?.alt} />
+          </a>
+          <p className="textoSlide">{imageFive?.alt}</p>
+        </div>
+        <div className="slide">
+          <a href="#">
+            <img src={imageSix?.src} alt={imageSix?.alt} />
+          </a>
+          <p className="textoSlide">{imageSix?.alt}</p>
         </div>
       </div>
       <div className="controles">
