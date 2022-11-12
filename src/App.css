@@ -22,17 +22,21 @@ body {
   --font-size-h1: 2.5rem;
   /* --font-size-h2: 13px; */
   /* --font-size-h3: 36px; */
+
   --font-size-text-xl: 1.8rem;
-  /* --font-size-text-l: 26px; */
+  --font-size-text-xs: 1rem;
+
   /* --font-size-text-m: 26px; */
   /* --font-size-text-s: 26px; */
   /* --font-size-menu: 18px; */
   /* --font-size-button: 18px; */
 
   --font-weight-h1: 400;
-  /* --font-weight-h2: 400; */
-  /* --font-weight-h3: 400; */
   --font-weight-text-xl: 400;
+  --font-weight-text-xs: 300;
+
+  /* --font-weight-h3: 400; */
+  /* --font-weight-h2: 400; */
   /* --font-weight-menu: 600;
   --font-weight-button: 600; */
 }

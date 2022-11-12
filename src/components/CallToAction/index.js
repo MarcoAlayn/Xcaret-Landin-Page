@@ -34,13 +34,13 @@ function CallToAction({ orientatición }) {
       </div>
       <div className="info">
         <img
+          className="logo"
           src={lang === "es" ? espLogo : engLogo}
           alt="logo promotion"
-          className="logo"
         />
         <h2>{lang === "es" ? espTitle : engTitle}</h2>
         <p>{lang === "es" ? espSubtitle : engSubtitle}</p>
-        <span>{lang === "es" ? espParagraphs : engParagraphs}</span>
+        <text>{lang === "es" ? espParagraphs : engParagraphs}</text>
         <div className="button">
           <Button
             href={lang === "es" ? espButton : engButton}

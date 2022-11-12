@@ -1,32 +1,84 @@
-.imgDER,
+/* contenedores padre */
+.imgIZQ,
+.imgDER {
+  background: rgb(50, 116, 239);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .imgIZQ {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  grid-template-areas: "carousel carousel carousel texts texts";
 }
 
 .imgDER {
-  flex-direction: row;
+  grid-template-areas: "texts texts carousel carousel carousel";
 }
 
-.imgIZQ {
-  flex-direction: row-reverse;
-}
-
-.imgDER .carousel,
-.imgIZQ .carousel {
+/* subconenedores */
+.carousel {
+  grid-area: carousel;
   overflow: hidden;
-  max-width: 50%;
-  background: red;
 }
 
-.imgDER .info,
+.info {
+  grid-area: texts;
+}
+
+.imgIZQ .info,
+.imgDER .info {
+  grid-area: texts;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .imgIZQ .info {
-  max-width: 50%;
+  text-align: start;
   background: orange;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  grid-template-areas:
+    "logo A   A   A   A   A"
+    "h2   h2  h2  B   B   B"
+    "p    p   p   p   p   p"
+    "txt  txt txt txt txt txt"
+    "btn  C   C   C   C   C";
+}
+
+.imgDER .info {
+  text-align: end;
+  background: chocolate;
+  grid-template-areas:
+    "A   A   A   A   A   logo"
+    "B   B   B   h2  h2  h2"
+    "p   p   p   p   p   p"
+    "txt txt txt txt txt txt"
+    "C   C   C   C   C   btn ";
+}
+
+/* hijos */
+.info .logo {
+  grid-area: logo;
+  width: 70px;
+  height: 100px;
+
+  margin-top: 2rem;
+}
+
+.info h2 {
+  grid-area: h2;
+  color: olivedrab;
+}
+
+.info p {
+  grid-area: p;
+  color: blue;
+}
+
+.info text {
+  grid-area: txt;
+  color: rgb(169, 25, 169);
+}
+
+.info .button {
+  grid-area: btn;
 }
