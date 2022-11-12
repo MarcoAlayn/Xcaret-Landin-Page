@@ -1,14 +1,41 @@
 .heroContainer {
-  background: gray;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: var(--primary-gray-color);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "A     A     A      A     A     A"
+    "title title title  title title B"
+    "disc  disc  parag  parag parag parag"
+    "C     C     C      C     C     C";
 }
 
-.heroContainer .heroSubContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.heroContainer .heroTitle {
+  grid-area: title;
+  text-align: center;
+  margin-top: 20vh;
+  text-transform: uppercase;
+}
+
+.heroContainer .heroDiscount {
+  grid-area: disc;
+  text-align: end;
+  margin-bottom: 35vh;
+}
+
+.heroContainer .heroTitle,
+.heroContainer .heroDiscount {
+  font-family: var(--primary-font);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  color: var(--black-color);
+}
+
+.heroContainer .heroParagraphs {
+  grid-area: parag;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-xl);
+  font-weight: var(--font-weight-text-xl);
+  color: var(--secondary-gray-color);
+  margin-bottom: 35vh;
 }

@@ -17,12 +17,14 @@ function Hero() {
 
   return (
     <div className="heroContainer">
-      <img src="" alt="" />
-      <h2>{lang === "es" ? espTitle : engTitle}</h2>
-      <div className="heroSubContainer">
-        <h3>{lang === "es" ? espDiscount : engDiscount}</h3>
-        <p>{lang === "es" ? espParagraphs : engParagraphs}</p>
-      </div>
+      <h1 className="heroTitle">{lang === "es" ? espTitle : engTitle}</h1>
+
+      <h1 className="heroDiscount">
+        {lang === "es" ? espDiscount : engDiscount}
+      </h1>
+      <p className="heroParagraphs">
+        {lang === "es" ? espParagraphs : engParagraphs}
+      </p>
     </div>
   );
 }

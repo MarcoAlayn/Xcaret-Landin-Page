@@ -14,21 +14,25 @@ body {
   --secondary-color: #214387;
   --white-color: white;
   --black-color: #111;
+  --primary-gray-color: rgb(218, 218, 218);
+  --secondary-gray-color: rgb(93, 93, 93);
 
   --primary-font: "Lato", sans-serif;
 
-  --font-size-h1: 44px;
-  --font-size-h2: 13px;
-  --font-size-h3: 36px;
-  --font-size-text: 26px;
-  --font-size-menu: 18px;
-  --font-size-slogan: 80px;
-  --font-size-button: 18px;
+  --font-size-h1: 2.5rem;
+  /* --font-size-h2: 13px; */
+  /* --font-size-h3: 36px; */
+  --font-size-text-xl: 1.8rem;
+  /* --font-size-text-l: 26px; */
+  /* --font-size-text-m: 26px; */
+  /* --font-size-text-s: 26px; */
+  /* --font-size-menu: 18px; */
+  /* --font-size-button: 18px; */
 
-  --font-weight-h1: 800;
-  --font-weight-h2: 400;
-  --font-weight-h3: 400;
-  --font-weight-text: 400;
-  --font-weight-menu: 600;
-  --font-weight-button: 600;
+  --font-weight-h1: 400;
+  /* --font-weight-h2: 400; */
+  /* --font-weight-h3: 400; */
+  --font-weight-text-xl: 400;
+  /* --font-weight-menu: 600;
+  --font-weight-button: 600; */
 }

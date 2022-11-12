@@ -21,8 +21,6 @@ function Footer() {
       ? allData?.es?.prefooter?.social
       : allData?.en?.prefooter?.social;
 
-  const arraySocial = social ? Object.entries(social) : null;
-
   const footer = lang === "es" ? allData?.es?.footer : allData?.en?.footer;
 
   return (
@@ -43,9 +41,9 @@ function Footer() {
         </div>
 
         <div className="social">
-          <a href={arraySocial?.[0][1]}>{arraySocial?.[0][0]}</a>
-          <a href={arraySocial?.[1][1]}>{arraySocial?.[1][0]}</a>
-          <a href={arraySocial?.[2][1]}>{arraySocial?.[2][0]}</a>
+          <a href={social?.facebookUrl}>facebook</a>
+          <a href={social?.instagramUrl}>instagram</a>
+          <a href={social?.twitterUrl}>twitter</a>
         </div>
       </div>
 
