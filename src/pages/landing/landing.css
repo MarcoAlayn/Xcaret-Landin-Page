@@ -1,6 +1,6 @@
 .landingContainer {
   display: grid;
-  gap: 16px;
+  /* gap: 16px; */
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
     "navb navb navb navb navb navb navb navb navb navb navb navb"
@@ -20,29 +20,37 @@
 
 .landingContainer .hero {
   grid-area: hero;
-  background: green;
+  /* background: green; */
 }
 
 .landingContainer .callCallToAction-One {
   grid-area: cta1;
-  background: yellow;
+  /* background: yellow; */
 }
 
 .landingContainer .callCallToAction-Two {
   grid-area: cta2;
-  background: yellowgreen;
+  /* background: yellowgreen; */
 }
 .landingContainer .callCallToAction-Three {
   grid-area: cta3;
-  background: purple;
+  /* background: purple; */
 }
 
 .landingContainer .legals {
   grid-area: lgls;
-  background: chocolate;
+  /* background: chocolate; */
 }
 
 .landingContainer .footer {
   grid-area: foot;
   background: darkslategrey;
+}
+
+/* separacion entre componentes */
+.landingContainer .hero,
+.landingContainer .callCallToAction-One,
+.landingContainer .callCallToAction-Two,
+.landingContainer .callCallToAction-Three {
+  margin: 2rem 0rem;
 }

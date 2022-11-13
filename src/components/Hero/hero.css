@@ -1,5 +1,6 @@
 .heroContainer {
-  background: var(--primary-gray-color);
+  background: var(--background-gray-color);
+  margin-bottom: 5.5rem;
   display: grid;
   gap: 28px;
   grid-template-columns: repeat(6, 1fr);
@@ -37,5 +38,5 @@
   font-size: var(--font-size-text-xl);
   font-weight: var(--font-weight-text-xl);
   color: var(--secondary-gray-color);
-  margin-bottom: 35vh;
+  margin-bottom: 20vh;
 }

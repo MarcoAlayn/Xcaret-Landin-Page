@@ -7,36 +7,37 @@ body {
   max-width: 1440px;
   margin: auto 100px;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 :root {
+  /* --primary-font: "Lato", sans-serif; */
+  /* --secundary-font: "PT Serif", serif; */
+
+  --primary-font: "Arial", sans-serif;
+  --secundary-font: "Times Roman", serif;
+
   --primary-color: #0095d9;
   --secondary-color: #214387;
   --white-color: white;
-  --black-color: #111;
-  --primary-gray-color: rgb(218, 218, 218);
+  --black-color: rgba(17, 17, 17);
+  --primary-gray-color: #484848;
   --secondary-gray-color: rgb(93, 93, 93);
-
-  --primary-font: "Lato", sans-serif;
+  --background-gray-color: rgb(235, 235, 235);
 
   --font-size-h1: 2.5rem;
-  /* --font-size-h2: 13px; */
-  /* --font-size-h3: 36px; */
-
+  --font-size-h2: 2rem;
   --font-size-text-xl: 1.8rem;
-  --font-size-text-xs: 1rem;
-
-  /* --font-size-text-m: 26px; */
-  /* --font-size-text-s: 26px; */
-  /* --font-size-menu: 18px; */
-  /* --font-size-button: 18px; */
+  --font-size-text-l: 1.6rem;
+  --font-size-text-s: 1.3rem;
+  --font-size-text-xs: 0.9rem;
+  --font-size-text-button: 1.3rem;
 
   --font-weight-h1: 400;
+  --font-weight-h2: 400;
   --font-weight-text-xl: 400;
+  --font-weight-text-l: 400;
+  --font-weight-text-s: 400;
   --font-weight-text-xs: 300;
-
-  /* --font-weight-h3: 400; */
-  /* --font-weight-h2: 400; */
-  /* --font-weight-menu: 600;
-  --font-weight-button: 600; */
+  --font-weight-text-button: 400;
 }

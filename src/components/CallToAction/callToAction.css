@@ -1,10 +1,10 @@
 /* contenedores padre */
 .imgIZQ,
 .imgDER {
-  background: rgb(50, 116, 239);
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(5, 1fr);
+  max-height: 95vh;
 }
 
 .imgIZQ {
@@ -35,50 +35,60 @@
 
 .imgIZQ .info {
   text-align: start;
-  background: orange;
   grid-template-areas:
     "logo A   A   A   A   A"
-    "h2   h2  h2  B   B   B"
+    "h2   h2  h2  h2  h2  h2"
     "p    p   p   p   p   p"
     "txt  txt txt txt txt txt"
-    "btn  C   C   C   C   C";
+    "btn  btn btn btn btn btn";
 }
 
 .imgDER .info {
   text-align: end;
-  background: chocolate;
   grid-template-areas:
     "A   A   A   A   A   logo"
-    "B   B   B   h2  h2  h2"
+    "h2  h2  h2  h2  h2  h2"
     "p   p   p   p   p   p"
     "txt txt txt txt txt txt"
-    "C   C   C   C   C   btn ";
+    "btn btn btn btn btn btn ";
 }
 
 /* hijos */
 .info .logo {
   grid-area: logo;
-  width: 70px;
-  height: 100px;
-
-  margin-top: 2rem;
+  width: 4.3rem;
+  height: 6rem;
+  margin-top: 3rem;
 }
 
 .info h2 {
   grid-area: h2;
-  color: olivedrab;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  color: var(--primary-gray-color);
+  text-transform: uppercase;
 }
 
 .info p {
   grid-area: p;
-  color: blue;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-l);
+  font-weight: var(--font-weight-text-l);
+  color: var(--secondary-gray-color);
 }
 
 .info text {
   grid-area: txt;
-  color: rgb(169, 25, 169);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-s);
+  font-weight: var(--font-weight-text-s);
+  color: var(--secondary-gray-color);
 }
 
 .info .button {
   grid-area: btn;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
 }

@@ -1,0 +1,29 @@
+.legalsContainer {
+  background: var(--background-gray-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-xs);
+  font-weight: var(--font-weight-text-xs);
+  color: var(--primary-gray-color);
+  margin-top: 1rem;
+  text-transform: capitalize;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "text1 text1 text1 x x"
+    "text2 text2 text2 x x"
+    "text3 text3 text3 x x";
+}
+
+.legalsContainer :nth-child(1) {
+  grid-area: text1;
+  margin-top: 2rem;
+}
+.legalsContainer :nth-child(3) {
+  grid-area: text2;
+}
+.legalsContainer :nth-child(5) {
+  grid-area: text3;
+  margin-bottom: 2rem;
+}
