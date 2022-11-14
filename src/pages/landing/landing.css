@@ -15,7 +15,7 @@
 .landingContainer .nav {
   grid-area: navb;
   background: red;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .landingContainer .hero {
@@ -44,13 +44,12 @@
 
 .landingContainer .footer {
   grid-area: foot;
-  background: darkslategrey;
+  /* background: darkslategrey; */
 }
 
 /* separacion entre componentes */
-.landingContainer .hero,
 .landingContainer .callCallToAction-One,
 .landingContainer .callCallToAction-Two,
 .landingContainer .callCallToAction-Three {
-  margin: 2rem 0rem;
+  margin: 2rem 6rem;
 }

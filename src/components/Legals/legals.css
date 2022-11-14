@@ -9,11 +9,11 @@
 
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-    "text1 text1 text1 x x"
-    "text2 text2 text2 x x"
-    "text3 text3 text3 x x";
+    "z text1 text1 text1 text1 text1 text1 x x x x x"
+    "z text2 text2 text2 text2 text2 text2 x x x x x "
+    "z text3 text3 text3 text3 text3 text3 x x x x x";
 }
 
 .legalsContainer :nth-child(1) {

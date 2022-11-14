@@ -1,13 +1,164 @@
-.footerContainer .numbersNsocial {
+.footerContainer {
+  background: rgb(54, 54, 54);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    " x    mail mail mail mail mail sred z"
+    " x    nums nums nums nums nums nums z"
+    " term term term term term term term term";
+}
+
+.footerContainer .contactMail {
+  grid-area: mail;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.footerContainer .numbers {
+  grid-area: nums;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    " x x x x x x x x"
+    " A C E G I K M Ñ"
+    " B D F H J L N O";
+}
+
+.footerContainer .numbers :nth-child(1) {
+  grid-area: A;
+}
+
+.footerContainer .numbers :nth-child(2) {
+  grid-area: B;
+}
+
+.footerContainer .numbers :nth-child(3) {
+  grid-area: C;
+}
+
+.footerContainer .numbers :nth-child(4) {
+  grid-area: D;
+}
+
+.footerContainer .numbers :nth-child(5) {
+  grid-area: E;
+}
+
+.footerContainer .numbers :nth-child(6) {
+  grid-area: F;
+}
+
+.footerContainer .numbers :nth-child(7) {
+  grid-area: G;
+}
+
+.footerContainer .numbers :nth-child(8) {
+  grid-area: H;
+}
+
+.footerContainer .numbers :nth-child(9) {
+  grid-area: I;
+}
+
+.footerContainer .numbers :nth-child(10) {
+  grid-area: J;
+}
+
+.footerContainer .numbers :nth-child(11) {
+  grid-area: K;
+}
+
+.footerContainer .numbers :nth-child(12) {
+  grid-area: L;
+}
+
+.footerContainer .numbers :nth-child(13) {
+  grid-area: M;
+}
+
+.footerContainer .numbers :nth-child(14) {
+  grid-area: N;
+}
+
+.footerContainer .numbers :nth-child(15) {
+  grid-area: Ñ;
+}
+
+.footerContainer .numbers :nth-child(16) {
+  grid-area: O;
+}
+
+/* only names */
+.footerContainer .numbers :nth-child(2n - 3) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* only nums */
+.footerContainer .numbers :nth-child(2n + 2) {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footerContainer .social {
+  grid-area: sred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 70%;
+  filter: invert();
+}
+
+.footerContainer .social :nth-child(2) {
+  margin: 0rem 0.6rem;
 }
 
 .footerContainer .termsUse {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  grid-area: term;
   background: var(--black-color);
+  height: 2.2rem;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "x A A A A B C z";
+}
+
+.footerContainer .termsUse .firstChild {
+  grid-area: A;
+  justify-content: flex-start;
+}
+.footerContainer .termsUse :nth-child(2) {
+  grid-area: B;
+  justify-content: flex-end;
+}
+.footerContainer .termsUse :nth-child(3) {
+  grid-area: C;
+  justify-content: center;
+}
+
+.footerContainer .termsUse .firstChild,
+.footerContainer .termsUse :nth-child(2),
+.footerContainer .termsUse :nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+
+.footerContainer .contactMail,
+.footerContainer .termsUse,
+.footerContainer .termsUse a,
+.footerContainer .numbers :nth-child(2n - 3),
+.footerContainer .numbers :nth-child(2n + 2) {
+  text-decoration: none;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-xs);
+  font-weight: var(--font-weight-text-xs);
   color: var(--white-color);
 }
