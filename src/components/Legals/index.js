@@ -3,12 +3,16 @@ import "./legals.css";
 import { useSelector } from "react-redux";
 
 function Legals() {
-  const lang = useSelector((state) => state.lang);
+  const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
-  const legals = lang === "es" ? allData?.es?.legals : allData?.en?.legals;
+  const legals = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.legals
+      : allData[0].en.legals;
+  };
 
-  const words = legals;
+  const words = legals();
 
   const legalSection = words?.split("<br/>", 3);
 

@@ -6,18 +6,14 @@ import { ReactComponent as RightArrow } from "../../assets/iconmonstr-angel-righ
 import { useSelector } from "react-redux";
 
 function Carousel({ img }) {
-  const lang = useSelector((state) => state.lang);
+  const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
-  const espCarousel = allData?.es?.carousel?.desktop;
-  const engCarousel = allData?.en?.carousel?.desktop;
-
-  const image0ne = lang === "es" ? espCarousel?.[0] : engCarousel?.[0];
-  const imageTwo = lang === "es" ? espCarousel?.[1] : engCarousel?.[1];
-  const imageThree = lang === "es" ? espCarousel?.[2] : engCarousel?.[2];
-  const imageFour = lang === "es" ? espCarousel?.[3] : engCarousel?.[3];
-  const imageFive = lang === "es" ? espCarousel?.[4] : engCarousel?.[4];
-  const imageSix = lang === "es" ? espCarousel?.[5] : engCarousel?.[5];
+  const images = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.carousel.desktop
+      : allData[0].en.carousel.desktop;
+  };
 
   const slideshow = useRef(null);
   const intervaloSlideshow = useRef(null);
@@ -85,39 +81,39 @@ function Carousel({ img }) {
       <div className="contenedorSlideshow" ref={slideshow}>
         <div className="slide">
           <a href="#">
-            <img src={image0ne?.src} alt={image0ne?.alt} />
+            <img src={images()?.[0].src} alt={images()?.[0].alt} />
           </a>
-          <p className="textoSlide">{image0ne?.alt}</p>
+          <p className="textoSlide">image one</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src={imageTwo?.src} alt={imageTwo?.alt} />
+            <img src={images()?.[1].src} alt={images()?.[1].alt} />
           </a>
-          <p className="textoSlide">{imageTwo?.alt}</p>
+          <p className="textoSlide">image two</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src={imageThree?.src} alt={imageThree?.alt} />
+            <img src={images()?.[2].src} alt={images()?.[2].alt} />
           </a>
-          <p className="textoSlide">{imageThree?.alt}</p>
+          <p className="textoSlide">image three</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src={imageFour?.src} alt={imageFour?.alt} />
+            <img src={images()?.[3].src} alt={images()?.[3].alt} />
           </a>
-          <p className="textoSlide">{imageFour?.alt}</p>
+          <p className="textoSlide">image four</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src={imageFive?.src} alt={imageFive?.alt} />
+            <img src={images()?.[4].src} alt={images()?.[4].alt} />
           </a>
-          <p className="textoSlide">{imageFive?.alt}</p>
+          <p className="textoSlide">image five</p>
         </div>
         <div className="slide">
           <a href="#">
-            <img src={imageSix?.src} alt={imageSix?.alt} />
+            <img src={images()?.[5].src} alt={images()?.[5].alt} />
           </a>
-          <p className="textoSlide">{imageSix?.alt}</p>
+          <p className="textoSlide">image six</p>
         </div>
       </div>
       <div className="controles">

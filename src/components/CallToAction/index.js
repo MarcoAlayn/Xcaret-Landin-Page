@@ -6,26 +6,43 @@ import Button from "../Button";
 import { useSelector } from "react-redux";
 
 function CallToAction({ orientatición }) {
-  const lang = useSelector((state) => state.lang);
+  const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
-  const espLogo = allData?.es?.promotions[0]?.logoPromo;
-  const engLogo = allData?.en?.promotions[0]?.logoPromo;
+  const logo = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].logoPromo
+      : allData[0].en.promotions[0].logoPromo;
+  };
 
-  const espTitle = allData?.es?.promotions[0]?.title;
-  const engTitle = allData?.en?.promotions[0]?.title;
+  const title = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].title
+      : allData[0].en.promotions[0].title;
+  };
 
-  const espSubtitle = allData?.es?.promotions[0]?.Subtitle;
-  const engSubtitle = allData?.en?.promotions[0]?.Subtitle;
+  const firstPragraph = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].Subtitle
+      : allData[0].en.promotions[0].Subtitle;
+  };
 
-  const espParagraphs = allData?.es?.promotions[0]?.paragraphs[0];
-  const engParagraphs = allData?.en?.promotions[0]?.paragraphs[0];
+  const secondPragraph = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].paragraphs
+      : allData[0].en.promotions[0].paragraphs;
+  };
 
-  const espButton = allData?.es?.promotions[0]?.button?.href;
-  const engButton = allData?.en?.promotions[0]?.button?.href;
-
-  const espText = allData?.es?.promotions[0]?.button?.text;
-  const engText = allData?.en?.promotions[0]?.button?.text;
+  const buttonHref = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].button.href
+      : allData[0].en.promotions[0].button.href;
+  };
+  const buttonText = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.promotions[0].button.text
+      : allData[0].en.promotions[0].button.text;
+  };
 
   return (
     <div className={orientatición}>
@@ -33,19 +50,12 @@ function CallToAction({ orientatición }) {
         <Carousel />
       </div>
       <div className="info">
-        <img
-          className="logo"
-          src={lang === "es" ? espLogo : engLogo}
-          alt="logo promotion"
-        />
-        <h2>{lang === "es" ? espTitle : engTitle}</h2>
-        <p>{lang === "es" ? espSubtitle : engSubtitle}</p>
-        <text>{lang === "es" ? espParagraphs : engParagraphs}</text>
+        <img className="logo" src={logo()} alt="logo promotion" />
+        <h2>{title()}</h2>
+        <p>{firstPragraph()}</p>
+        <p className="secondPragraph">{secondPragraph()}</p>
         <div className="button">
-          <Button
-            href={lang === "es" ? espButton : engButton}
-            text={lang === "es" ? espText : engText}
-          />
+          <Button href={buttonHref()} text={buttonText()} />
         </div>
       </div>
     </div>

@@ -3,28 +3,33 @@ import "./hero.css";
 import { useSelector } from "react-redux";
 
 function Hero() {
-  const lang = useSelector((state) => state.lang);
+  const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
-  const espTitle = allData?.es?.header.h1;
-  const engTitle = allData?.en?.header.h1;
+  const title = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.header.h1
+      : allData[0].en.header.h1;
+  };
 
-  const espDiscount = allData?.en?.header?.discount;
-  const engDiscount = allData?.es?.header?.discount;
+  const discount = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.header.discount
+      : allData[0].en.header.discount;
+  };
 
-  const espParagraphs = allData?.es?.header?.paragraphs;
-  const engParagraphs = allData?.en?.header?.paragraphs;
+  const paragraphs = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.header.paragraphs
+      : allData[0].en.header.paragraphs;
+  };
 
   return (
     <div className="heroContainer">
-      <h1 className="heroTitle">{lang === "es" ? espTitle : engTitle}</h1>
+      <h1 className="heroTitle">{title()}</h1>
 
-      <h1 className="heroDiscount">
-        {lang === "es" ? espDiscount : engDiscount}
-      </h1>
-      <p className="heroParagraphs">
-        {lang === "es" ? espParagraphs : engParagraphs}
-      </p>
+      <h1 className="heroDiscount">{discount()}</h1>
+      <p className="heroParagraphs">{paragraphs()}</p>
     </div>
   );
 }

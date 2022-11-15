@@ -1,9 +1,17 @@
 /* eslint-disable no-case-declarations */
-import { SET_SPANISH_LENG, SET_ENGLISH_LENG, API_DATA } from "./actions";
+import {
+  SET_SPANISH_LENG,
+  SET_ENGLISH_LENG,
+  API_DATA,
+  SET_CURRENCY_USD,
+  SET_CURRENCY_MEX,
+  SET_CURRENCY_EUR,
+} from "./actions";
 
 const initialState = {
   allData: [],
   lang: [],
+  currency: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -22,6 +30,21 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         allData: action.payload,
+      };
+    case SET_CURRENCY_USD:
+      return {
+        ...state,
+        currency: ["usd"],
+      };
+    case SET_CURRENCY_MEX:
+      return {
+        ...state,
+        currency: ["mex"],
+      };
+    case SET_CURRENCY_EUR:
+      return {
+        ...state,
+        currency: ["eur"],
       };
     default:
       return state;

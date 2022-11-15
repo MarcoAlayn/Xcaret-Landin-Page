@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSpanish, apiData } from "../../redux/actions";
+import { setSpanish, apiData, setCurrencyMEX } from "../../redux/actions";
 import CallToAction from "../../components/CallToAction";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
@@ -12,15 +12,17 @@ function Landing() {
   const dispatch = useDispatch();
   const lang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
+  const currency = useSelector((state) => state.currency);
 
   useEffect(() => {
     dispatch(apiData());
     if (!lang.length) dispatch(setSpanish());
+    if (!currency.length) dispatch(setCurrencyMEX());
   }, [dispatch]);
 
   return (
     <div className="landingContainer">
-      {allData ? (
+      {allData.length ? (
         <>
           <nav className="nav">
             <Navbar />

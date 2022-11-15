@@ -1,36 +1,26 @@
 import React from "react";
 import "./navbar.css";
 import Brand from "../../components/Brand";
-import Contact from "../../components/Contact";
 import { useSelector } from "react-redux";
+import Options from "../Options";
 
 const Navbar = () => {
-  const lang = useSelector((state) => state.lang);
+  const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
-  const espLogo = allData?.es?.navbar?.logo;
-  const engLogo = allData?.en?.navbar?.logo;
-
-  const espContact = allData?.es?.navbar?.menu?.contact;
-  const engContact = allData?.en?.navbar?.menu?.contact;
-
-  const espLang = allData?.es?.navbar?.menu?.lang;
-  const engLang = allData?.en?.navbar?.menu?.lang;
-
-  const espCurrency = allData?.es?.navbar?.menu?.currency;
-  const engCurrency = allData?.en?.navbar?.menu?.currency;
+  const logo = () => {
+    return currentLang[0] === "es"
+      ? allData[0].es.navbar.logo
+      : allData[0].en.navbar.logo;
+  };
 
   return (
     <nav className="navbarContainer">
       <div className="brand">
-        <Brand logo={lang === "es" ? espLogo : engLogo} />
+        <Brand logo={logo()} />
       </div>
-      <div className="contact">
-        <Contact
-          contact={lang === "es" ? espContact : engContact}
-          lang={lang === "es" ? espLang : engLang}
-          currency={lang === "es" ? espCurrency : engCurrency}
-        />
+      <div className="OptionsContainer">
+        <Options />
       </div>
     </nav>
   );
