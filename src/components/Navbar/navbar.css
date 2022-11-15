@@ -1,17 +1,15 @@
 .navbarContainer {
-  display: flex;
-  flex-direction: row;
-  position: sticky;
+  display: grid;
+  grid-template-columns: 1200px 240px;
+  background: var(--background-gray-color);
+  overflow: hidden;
 }
 .navbarContainer .brand {
-  background: violet;
   display: flex;
   justify-content: flex-start;
-  width: 80%;
+  align-items: center;
+  margin-left: 25px;
 }
 .navbarContainer .contact {
   background: blue;
-  display: flex;
-  justify-content: flex-end;
-  width: 20%;
 }

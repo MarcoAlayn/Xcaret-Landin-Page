@@ -22,10 +22,10 @@ body {
   --black-color: rgba(17, 17, 17);
   --primary-gray-color: #484848;
   --secondary-gray-color: rgb(93, 93, 93);
-  --background-gray-color: rgb(235, 235, 235);
+  --background-gray-color: rgb(237, 237, 237);
 
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
   --font-size-text-xl: 1.8rem;
   --font-size-text-l: 1.6rem;
   --font-size-text-s: 1.3rem;

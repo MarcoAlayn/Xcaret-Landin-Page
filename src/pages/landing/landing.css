@@ -14,37 +14,29 @@
 
 .landingContainer .nav {
   grid-area: navb;
-  background: red;
-  /* height: 100px; */
 }
 
 .landingContainer .hero {
   grid-area: hero;
-  /* background: green; */
 }
 
 .landingContainer .callCallToAction-One {
   grid-area: cta1;
-  /* background: yellow; */
 }
 
 .landingContainer .callCallToAction-Two {
   grid-area: cta2;
-  /* background: yellowgreen; */
 }
 .landingContainer .callCallToAction-Three {
   grid-area: cta3;
-  /* background: purple; */
 }
 
 .landingContainer .legals {
   grid-area: lgls;
-  /* background: chocolate; */
 }
 
 .landingContainer .footer {
   grid-area: foot;
-  /* background: darkslategrey; */
 }
 
 /* separacion entre componentes */

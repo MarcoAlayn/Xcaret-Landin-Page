@@ -4,7 +4,6 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(5, 1fr);
-  max-height: 95vh;
 }
 
 .imgIZQ {
@@ -90,5 +89,5 @@
   grid-area: btn;
   display: flex;
   justify-content: center;
-  margin: 2rem 0rem;
+  margin-bottom: 2rem;
 }

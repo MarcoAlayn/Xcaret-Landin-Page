@@ -1,14 +1,14 @@
 .heroContainer {
-  background: var(--background-gray-color);
+  background: rgb(218, 218, 218);
   margin-bottom: 5.5rem;
   display: grid;
-  gap: 28px;
+  gap: 1rem;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
     "A     A     A      A     A     A"
     "title title title  title title B"
-    "disc  disc  parag  parag parag parag"
-    "C     C     C      C     C     C";
+    "disc  disc  parag  parag parag C     "
+    "D     D     D      D     D     D";
 }
 
 .heroContainer .heroTitle {
