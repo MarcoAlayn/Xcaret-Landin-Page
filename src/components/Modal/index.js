@@ -18,25 +18,37 @@ function Modal({ state, setState }) {
 
   const nums = () => {
     return currentCurrency[0] === "usd"
-      ? [1000, 160, 1160]
+      ? ["$ 1000.00USD", "$ 160.00USD", "$ 1160.00USD"]
       : currentCurrency[0] === "mex"
-      ? [1000, 160, 1160]
+      ? ["$ 1000.00MEX", "$ 160.00MEX", "$ 1160.00MEX"]
       : currentCurrency[0] === "eur"
-      ? [1000, 160, 1160]
+      ? ["€ 1000.00EUR", "€ 160.00EUR", "€ 1160.00EUR"]
       : null;
   };
 
-  const currencySymbol = () => {
-    return currentCurrency[0] === "usd"
-      ? ["$", "USD"]
-      : currentCurrency[0] === "mex"
-      ? ["$", "MEX"]
-      : currentCurrency[0] === "eur"
-      ? ["€", "EUR"]
-      : null;
+  const reservationCode = () => {
+    return Math.floor(Math.random() * 10000000000);
   };
 
-  console.log(nums());
+  const modalTranslate = () => {
+    return currentLang[0] === "es"
+      ? [
+          "Código de reservación",
+          "Servicio",
+          "7 Noches",
+          "Sumario de Pedido",
+          "IVA",
+          "Continuar",
+        ]
+      : [
+          "Reservation code",
+          "Service",
+          "7 Nights",
+          "Order Summary",
+          "TAX",
+          "Continue",
+        ];
+  };
 
   return (
     <>
@@ -59,40 +71,31 @@ function Modal({ state, setState }) {
               </div>
             </div>
             <div className="contenido">
+              <span>
+                {modalTranslate()[0]}: {reservationCode()}
+              </span>
               <div className="groupOne">
-                <h3>Servicio</h3>
+                <h3>{modalTranslate()[1]}</h3>
                 <p>Hotel Xcaret Arte</p>
-                <p>7 noches</p>
+                <p>{modalTranslate()[2]}</p>
+                <hr />
               </div>
               <div className="groupTwo">
-                <h3>Pedido</h3>
+                <h3>{modalTranslate()[3]}</h3>
                 <p>
-                  Subtotal{" "}
-                  <span>
-                    {currencySymbol()[0]}
-                    {nums()[0]}
-                    {currencySymbol()[1]}
-                  </span>{" "}
+                  Subtotal <div className="span1">{nums()[0]}</div>{" "}
                 </p>
                 <p>
-                  iva{" "}
-                  <span>
-                    {currencySymbol()[0]}
-                    {nums()[1]}
-                    {currencySymbol()[1]}
-                  </span>
+                  {modalTranslate()[4]} <div>{nums()[1]}</div>
                 </p>
+                <hr />
                 <p>
-                  Total{" "}
-                  <span>
-                    {currencySymbol()[0]}
-                    {nums()[2]}
-                    {currencySymbol()[1]}
-                  </span>
+                  Total <div>{nums()[2]}</div>
                 </p>
+                <hr />
               </div>
               <div className="btn">
-                <Button text={"Continuar"} />
+                <Button text={modalTranslate()[5]} />
               </div>
             </div>
           </div>

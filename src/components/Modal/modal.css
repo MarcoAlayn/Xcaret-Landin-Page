@@ -1,4 +1,7 @@
 .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -6,9 +9,10 @@
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-xs);
+  font-weight: var(--font-weight-text-xs);
+  color: var(--black-color);
 }
 
 .overlay .contenedorModal {
@@ -26,13 +30,13 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .overlay .encabezadoModal h3 {
   font-weight: 500px;
   font-size: 16px;
-  color: #1766dc;
+  color: var(--primary-color);
 }
 
 .overlay .botonCerrar {
@@ -46,11 +50,11 @@
   cursor: pointer;
   transition: 0.3s ease all;
   border-radius: 5px;
-  color: #1766dc;
+  color: var(--primary-color);
 }
 
 .overlay .botonCerrar:hover {
-  color: black;
+  color: var(--black-color);
 }
 
 .overlay .botonCerrar svg {
@@ -63,8 +67,13 @@
   gap: 16px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
+    "code     code"
     "groupOne groupTwo"
     "btn      btn";
+}
+
+.overlay .contenido span {
+  grid-area: code;
 }
 
 .overlay .contenido .groupOne {

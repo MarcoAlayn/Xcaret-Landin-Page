@@ -14,6 +14,9 @@
 
 .landingContainer .nav {
   grid-area: navb;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 
 .landingContainer .hero {
