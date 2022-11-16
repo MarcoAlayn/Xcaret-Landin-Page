@@ -5,7 +5,7 @@ import "./callToAction.css";
 import Button from "../Button";
 import { useSelector } from "react-redux";
 
-function CallToAction({ orientatición }) {
+function CallToAction({ orientatición, state, setState }) {
   const currentLang = useSelector((state) => state.lang);
   const allData = useSelector((state) => state.allData);
 
@@ -33,11 +33,12 @@ function CallToAction({ orientatición }) {
       : allData[0].en.promotions[0].paragraphs;
   };
 
-  const buttonHref = () => {
-    return currentLang[0] === "es"
-      ? allData[0].es.promotions[0].button.href
-      : allData[0].en.promotions[0].button.href;
-  };
+  // const buttonHref = () => {
+  //   return currentLang[0] === "es"
+  //     ? allData[0].es.promotions[0].button.href
+  //     : allData[0].en.promotions[0].button.href;
+  // };
+
   const buttonText = () => {
     return currentLang[0] === "es"
       ? allData[0].es.promotions[0].button.text
@@ -54,8 +55,8 @@ function CallToAction({ orientatición }) {
         <h2>{title()}</h2>
         <p>{firstPragraph()}</p>
         <p className="secondPragraph">{secondPragraph()}</p>
-        <div className="button">
-          <Button href={buttonHref()} text={buttonText()} />
+        <div className="button" onClick={() => setState(!state)}>
+          <Button text={buttonText()} />
         </div>
       </div>
     </div>

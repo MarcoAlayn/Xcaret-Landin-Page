@@ -39,6 +39,10 @@
   grid-area: foot;
 }
 
+.landingContainer .modal {
+  z-index: 3;
+}
+
 /* separacion entre componentes */
 .landingContainer .callCallToAction-One,
 .landingContainer .callCallToAction-Two,

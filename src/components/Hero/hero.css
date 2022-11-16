@@ -3,12 +3,12 @@
   margin-bottom: 5.5rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-areas:
-    "A     A     A      A     A     A"
-    "title title title  title title B"
-    "disc  disc  parag  parag parag C     "
-    "D     D     D      D     D     D";
+    "A     A     A     A     A      A     A       A"
+    "title title title title title  title B       B"
+    "E     E     disc  parag parag  parag parag   C"
+    "D     D     D      D     D     D     D       D";
 }
 
 .heroContainer .heroTitle {
@@ -20,7 +20,7 @@
 
 .heroContainer .heroDiscount {
   grid-area: disc;
-  text-align: end;
+  /* text-align: end; */
   margin-bottom: 35vh;
 }
 

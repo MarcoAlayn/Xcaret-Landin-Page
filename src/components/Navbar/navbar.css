@@ -1,8 +1,8 @@
 .navbarContainer {
   display: grid;
-  grid-template-columns: 1200px 240px;
+  grid-template-columns: auto 240px;
   background: var(--background-gray-color);
-  overflow: hidden;
+  padding: 2rem 0rem;
 }
 .navbarContainer .brand {
   display: flex;
@@ -11,5 +11,10 @@
   margin-left: 25px;
 }
 .navbarContainer .OptionsContainer {
-  background: blue;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
 }
+
+

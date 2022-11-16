@@ -7,9 +7,9 @@ import {
   setCurrencyMEX,
   setCurrencyEUR,
 } from "../../redux/actions";
+import "./options.css";
 
 const Options = () => {
-  const currency = useSelector((state) => state.currency);
   const langs = useSelector((state) => state.lang);
 
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ const Options = () => {
     e.preventDefault();
     return dispatch(setSpanish());
   };
+
   const handleSetEnglish = (e) => {
     e.preventDefault();
     return dispatch(setEnglish());
@@ -27,10 +28,12 @@ const Options = () => {
     e.preventDefault();
     return dispatch(setCurrencyUSD());
   };
+
   const handleSetMex = (e) => {
     e.preventDefault();
     return dispatch(setCurrencyMEX());
   };
+
   const handleSetEur = (e) => {
     e.preventDefault();
     return dispatch(setCurrencyEUR());
@@ -45,23 +48,12 @@ const Options = () => {
   };
 
   const currencyCurrent = () => {
-    return currency[0] === "usd" ? (
-      <>
-        <button onClick={handleSetMex}>MEX</button>
-        <button onClick={handleSetEur}>EUR</button>
-      </>
-    ) : currency[0] === "mex" ? (
-      <>
-        <button onClick={handleSetUsd}>USD</button>
-        <button onClick={handleSetEur}>EUR</button>
-      </>
-    ) : currency[0] === "eur" ? (
+    return (
       <>
         <button onClick={handleSetUsd}>USD</button>
         <button onClick={handleSetMex}>MEX</button>
+        <button onClick={handleSetEur}>EUR</button>
       </>
-    ) : (
-      <span>N/A</span>
     );
   };
 

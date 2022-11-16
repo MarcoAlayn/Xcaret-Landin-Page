@@ -1,1 +1,29 @@
+.options {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
 
+.options button {
+  padding: 2px 2px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-text-xs);
+  font-weight: var(--font-weight-text-xs);
+  color: var(--black-color);
+  background: var(--background-gray-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.options .currency {
+  margin: 0px 20px;
+}
+
+.options button:active {
+  color: aqua;
+  text-decoration: underline;
+  background: red;
+}

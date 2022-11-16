@@ -3,9 +3,9 @@
   font-size: var(--font-size-text-button);
   font-weight: var(--font-weight-text-button);
   color: var(--black-color);
+  background: var(--white-color);
   text-decoration: none;
   padding: 0.8rem 4rem;
   border: 1px solid black;
   border-radius: 5px;
-  background: var(--white-color);
 }
