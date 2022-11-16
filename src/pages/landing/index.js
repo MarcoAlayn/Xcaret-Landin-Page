@@ -61,12 +61,7 @@ function Landing() {
             <Footer />
           </footer>
           <div className="modal">
-            <Modal state={viewmodal} setState={setViewModal}>
-              <h3>soy un titulo</h3>
-              <p>soy un parrafo de texto generico</p>
-              {/* este boton es para mandarlo a la thank you page */}
-              <button>soy un boton</button>
-            </Modal>
+            <Modal state={viewmodal} setState={setViewModal} />
           </div>
         </>
       ) : (

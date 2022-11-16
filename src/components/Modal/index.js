@@ -1,15 +1,50 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./modal.css";
+import { useSelector } from "react-redux";
+import Button from "../Button";
 
-function Modal({ children, state, setState }) {
+function Modal({ state, setState }) {
+  const currentLang = useSelector((state) => state.lang);
+  const currentCurrency = useSelector((state) => state.currency);
+
+  const title = () => {
+    return currentLang[0] === "es" ? (
+      <h3>Resumen de Compra</h3>
+    ) : (
+      <h3>Purchase summary</h3>
+    );
+  };
+
+  const nums = () => {
+    return currentCurrency[0] === "usd"
+      ? [1000, 160, 1160]
+      : currentCurrency[0] === "mex"
+      ? [1000, 160, 1160]
+      : currentCurrency[0] === "eur"
+      ? [1000, 160, 1160]
+      : null;
+  };
+
+  const currencySymbol = () => {
+    return currentCurrency[0] === "usd"
+      ? ["$", "USD"]
+      : currentCurrency[0] === "mex"
+      ? ["$", "MEX"]
+      : currentCurrency[0] === "eur"
+      ? ["€", "EUR"]
+      : null;
+  };
+
+  console.log(nums());
+
   return (
     <>
       {state && (
         <div className="overlay">
           <div className="contenedorModal">
             <div className="encabezadoModal">
-              <h3>Titulo</h3>
+              {title()}
               <div className="botonCerrar" onClick={() => setState(!state)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +58,43 @@ function Modal({ children, state, setState }) {
                 </svg>
               </div>
             </div>
-            <div className="contenido">{children}</div>
+            <div className="contenido">
+              <div className="groupOne">
+                <h3>Servicio</h3>
+                <p>Hotel Xcaret Arte</p>
+                <p>7 noches</p>
+              </div>
+              <div className="groupTwo">
+                <h3>Pedido</h3>
+                <p>
+                  Subtotal{" "}
+                  <span>
+                    {currencySymbol()[0]}
+                    {nums()[0]}
+                    {currencySymbol()[1]}
+                  </span>{" "}
+                </p>
+                <p>
+                  iva{" "}
+                  <span>
+                    {currencySymbol()[0]}
+                    {nums()[1]}
+                    {currencySymbol()[1]}
+                  </span>
+                </p>
+                <p>
+                  Total{" "}
+                  <span>
+                    {currencySymbol()[0]}
+                    {nums()[2]}
+                    {currencySymbol()[1]}
+                  </span>
+                </p>
+              </div>
+              <div className="btn">
+                <Button text={"Continuar"} />
+              </div>
+            </div>
           </div>
         </div>
       )}

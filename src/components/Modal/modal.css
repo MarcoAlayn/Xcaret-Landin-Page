@@ -37,7 +37,7 @@
 
 .overlay .botonCerrar {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   width: 30px;
   height: 30px;
@@ -59,8 +59,32 @@
 }
 
 .overlay .contenido {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "groupOne groupTwo"
+    "btn      btn";
+}
+
+.overlay .contenido .groupOne {
+  grid-area: groupOne;
+}
+.overlay .contenido .groupTwo {
+  grid-area: groupTwo;
+}
+
+.overlay .contenido .groupTwo p,
+.overlay .contenido .groupTwo span {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay .contenido .btn {
+  grid-area: btn;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
