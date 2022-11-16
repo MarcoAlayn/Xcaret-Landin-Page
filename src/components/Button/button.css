@@ -1,11 +1,18 @@
 .buttonContainer a {
-  font-family: var(--secundary-font);
-  font-size: var(--font-size-text-button);
-  font-weight: var(--font-weight-text-button);
-  color: var(--black-color);
-  background: var(--white-color);
+  font-family: var(--secundary-font) !important;
+  font-size: var(--font-size-text-button) !important;
+  font-weight: var(--font-weight-text-button) !important;
+  color: var(--black-color) !important;
+  background: var(--white-color) !important;
   text-decoration: none;
   padding: 0.8rem 4rem;
-  border: 1px solid black;
+  border: 1px solid rgba(17, 17, 17);
   border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.buttonContainer a:hover {
+  color: var(--white-color) !important;
+  background: var(--primary-color) !important;
+  border: 1px solid rgb(255, 255, 255);
 }

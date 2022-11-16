@@ -32,7 +32,6 @@ function Footer() {
       ? allData[0].es.footer
       : allData[0].en.footer;
   };
-  console.log("footer", footer());
 
   return (
     <div className="footerContainer">

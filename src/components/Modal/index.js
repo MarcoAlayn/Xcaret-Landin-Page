@@ -83,19 +83,19 @@ function Modal({ state, setState }) {
               <div className="groupTwo">
                 <h3>{modalTranslate()[3]}</h3>
                 <p>
-                  Subtotal <div className="span1">{nums()[0]}</div>{" "}
+                  Subtotal <span className="span1">{nums()[0]}</span>{" "}
                 </p>
                 <p>
-                  {modalTranslate()[4]} <div>{nums()[1]}</div>
+                  {modalTranslate()[4]} <span>{nums()[1]}</span>
                 </p>
                 <hr />
                 <p>
-                  Total <div>{nums()[2]}</div>
+                  Total <span>{nums()[2]}</span>
                 </p>
                 <hr />
               </div>
               <div className="btn">
-                <Button text={modalTranslate()[5]} />
+                <Button text={modalTranslate()[5]} href={"/thanks"} />
               </div>
             </div>
           </div>

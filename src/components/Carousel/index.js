@@ -74,7 +74,10 @@ function Carousel({ img }) {
     intervaloSlideshow.current = setInterval(() => {
       siguiente();
     }, 5000);
-  }, []);
+    return () => {
+      clearInterval(intervaloSlideshow.current);
+    };
+  }, [siguiente]);
 
   return (
     <div className="ContenedorPrincipal">
