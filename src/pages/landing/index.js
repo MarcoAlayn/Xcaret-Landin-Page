@@ -8,6 +8,7 @@ import Legals from "../../components/Legals";
 import Footer from "../../components/Footer";
 import Modal from "../../components/Modal";
 import "./landing.css";
+import Loader from "../../assets/loading.gif";
 
 function Landing() {
   const dispatch = useDispatch();
@@ -65,7 +66,9 @@ function Landing() {
           </div>
         </>
       ) : (
-        <h1>cargando</h1>
+        <div className="loader">
+          <img src={Loader} alt="image loading" />
+        </div>
       )}
     </div>
   );

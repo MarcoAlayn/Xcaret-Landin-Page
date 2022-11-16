@@ -41,7 +41,10 @@ const Options = () => {
 
   const idiomCurrent = () => {
     return langs[0] === "es" ? (
-      <button onClick={handleSetEnglish}>en</button>
+      <button onClick={handleSetEnglish}>
+        {" "}
+        <a>en</a>{" "}
+      </button>
     ) : (
       <button onClick={handleSetSpanish}>es</button>
     );

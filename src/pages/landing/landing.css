@@ -1,4 +1,5 @@
 .landingContainer {
+  position: relative;
   display: grid;
   /* gap: 16px; */
   grid-template-columns: repeat(12, 1fr);
@@ -51,4 +52,11 @@
 .landingContainer .callCallToAction-Two,
 .landingContainer .callCallToAction-Three {
   margin: 2rem 6rem;
+}
+
+.landingContainer .loader {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 190px);
+  scale: 30%;
 }

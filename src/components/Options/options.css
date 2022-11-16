@@ -21,9 +21,14 @@
 .options .currency {
   margin: 0px 20px;
 }
+.options .idiom button:hover,
+.options .idiom button:focus-within {
+  color: var(--secondary-gray-color);
+}
 
-.options button:active {
-  color: aqua;
-  text-decoration: underline;
-  background: red;
+.options .currency button:hover,
+.options .currency button:focus-within {
+  font-family: var(--primary-font);
+  color: var(--secondary-gray-color);
+  font-weight: 600;
 }

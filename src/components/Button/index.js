@@ -6,7 +6,9 @@ import "./button.css";
 function Button({ href, text }) {
   return (
     <div className="buttonContainer">
-      <Link to={href}>{text}</Link>
+      <Link className="link" to={href}>
+        {text}
+      </Link>
     </div>
   );
 }
