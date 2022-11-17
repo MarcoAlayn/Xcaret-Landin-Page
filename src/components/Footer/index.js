@@ -35,6 +35,18 @@ function Footer() {
 
   return (
     <div className="footerContainer">
+      <div className="social">
+        <a href={social()?.facebookUrl}>
+          <FacebookIcon />
+        </a>
+        <a href={social()?.instagramUrl}>
+          <InstagramIcon />
+        </a>
+        <a href={social()?.twitterUrl}>
+          <TwitterIcon />
+        </a>
+      </div>
+
       <div className="contactMail">
         <p>{contactCenter()?.title}</p>
         <span>{contactCenter()?.email} </span>
@@ -59,25 +71,16 @@ function Footer() {
         <p>{numbers()[7]?.number}</p>
       </div>
 
-      <div className="social">
-        <a href={social()?.facebookUrl}>
-          <FacebookIcon />
-        </a>
-        <a href={social()?.instagramUrl}>
-          <InstagramIcon />
-        </a>
-        <a href={social()?.twitterUrl}>
-          <TwitterIcon />
-        </a>
-      </div>
       <div className="termsUse">
         <p className="firstChild">{footer()?.copy}</p>
-        <p>
-          <a href={footer()?.links[0].href}>{footer()?.links[0].tittle}</a>
-        </p>
-        <p>
-          <a href={footer()?.links[1].href}>{footer()?.links[1].tittle}</a>
-        </p>
+        <div>
+          <p className="secondChild">
+            <a href={footer()?.links[1].href}>{footer()?.links[1].tittle}</a>
+          </p>
+          <p className="thirdchild">
+            <a href={footer()?.links[0].href}>{footer()?.links[0].tittle}</a>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 .footerContainer {
   background: rgb(59, 52, 52);
+
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(8, 1fr);
@@ -163,18 +164,75 @@
   color: var(--white-color);
 }
 
-/* Pantallas grandes (desktops de menos de 1200px) */
-@media (max-width: 1199.98px) {
-}
-
-/* Pantallas medianas (tablets de menos de 992px) */
-@media (max-width: 991.98px) {
-}
-
-/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
-@media (max-width: 767.98px) {
-}
-
 /* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
 @media (max-width: 575.98px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .footerContainer .contactMail {
+    justify-self: flex-start;
+    margin: 0rem 2rem;
+    font-size: calc(var(--font-size-text-xs) - 15%) !important ;
+  }
+
+  .footerContainer .numbers {
+    text-align: center;
+    margin: 0rem 2rem;
+  }
+
+  .footerContainer .numbers p {
+    font-size: calc(var(--font-size-text-xs) - 15%) !important ;
+    width: 110px;
+    margin: 0rem 0rem;
+  }
+
+  .footerContainer .numbers :nth-child(2n - 3),
+  .footerContainer .numbers :nth-child(2n + 2) {
+    margin-bottom: 0rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footerContainer .numbers :nth-child(7),
+  .footerContainer .numbers :nth-child(8),
+  .footerContainer .numbers :nth-child(9),
+  .footerContainer .numbers :nth-child(10),
+  .footerContainer .numbers :nth-child(11),
+  .footerContainer .numbers :nth-child(12),
+  .footerContainer .numbers :nth-child(13),
+  .footerContainer .numbers :nth-child(14),
+  .footerContainer .numbers :nth-child(15),
+  .footerContainer .numbers :nth-child(16) {
+    display: none;
+  }
+
+  .footerContainer .social {
+    margin-bottom: -25px;
+  }
+
+  .footerContainer .termsUse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerContainer .termsUse .firstChild {
+    font-size: calc(var(--font-size-text-xs) - 20%) !important ;
+    margin-bottom: -0.9rem;
+  }
+
+  .footerContainer .termsUse .secondChild :nth-child(1),
+  .footerContainer .termsUse .thirdchild :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    font-size: calc(var(--font-size-text-xs) - 20%) !important ;
+  }
 }
