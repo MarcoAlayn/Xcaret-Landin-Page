@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Button from "../../components/Button";
 import { useDispatch, useSelector } from "react-redux";
-import "./thanks.css";
-import Brand from "../../components/Brand";
 import { apiData, setSpanish } from "../../redux/actions";
+import Button from "../../components/Button";
+import Brand from "../../components/Brand";
+import "./thanks.css";
 
 function Thanks() {
   const dispatch = useDispatch();

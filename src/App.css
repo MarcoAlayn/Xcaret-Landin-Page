@@ -10,12 +10,11 @@ body {
 }
 
 :root {
-  /* --primary-font: "Lato", sans-serif; */
-  /* --secundary-font: "PT Serif", serif; */
-
+  /* font-family */
   --primary-font: "Arial", sans-serif;
   --secondary-font: "Times Roman", serif;
 
+  /* Colors */
   --primary-color: #0095d9;
   --secondary-color: #214387;
   --white-color: white;
@@ -24,6 +23,7 @@ body {
   --secondary-gray-color: rgb(93, 93, 93);
   --background-gray-color: rgb(237, 237, 237);
 
+  /* font-size */
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
   --font-size-text-xl: 1.8rem;
@@ -32,6 +32,7 @@ body {
   --font-size-text-xs: 0.8rem;
   --font-size-text-button: 1.3rem;
 
+  /* Front-weight */
   --font-weight-h1: 400;
   --font-weight-h2: 400;
   --font-weight-text-xl: 400;

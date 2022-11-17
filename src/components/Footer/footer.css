@@ -1,6 +1,5 @@
 .footerContainer {
   background: rgb(59, 52, 52);
-
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(8, 1fr);

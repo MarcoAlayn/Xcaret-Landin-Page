@@ -1,8 +1,8 @@
 import React from "react";
-import "./navbar.css";
 import Brand from "../../components/Brand";
 import { useSelector } from "react-redux";
 import Options from "../Options";
+import "./navbar.css";
 
 const Navbar = () => {
   const currentLang = useSelector((state) => state.lang);

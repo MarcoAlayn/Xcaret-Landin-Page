@@ -46,12 +46,10 @@ function Footer() {
           <TwitterIcon />
         </a>
       </div>
-
       <div className="contactMail">
         <p>{contactCenter()?.title}</p>
         <span>{contactCenter()?.email} </span>
       </div>
-
       <div className="numbers">
         <p>{numbers()[0]?.name}</p>
         <p>{numbers()[0]?.number}</p>
@@ -70,7 +68,6 @@ function Footer() {
         <p>{numbers()[7]?.name}</p>
         <p>{numbers()[7]?.number}</p>
       </div>
-
       <div className="termsUse">
         <p className="firstChild">{footer()?.copy}</p>
         <div className="termGroup">

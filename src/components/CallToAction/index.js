@@ -33,12 +33,6 @@ function CallToAction({ orientatición, state, setState }) {
       : allData[0].en.promotions[0].paragraphs;
   };
 
-  // const buttonHref = () => {
-  //   return currentLang[0] === "es"
-  //     ? allData[0].es.promotions[0].button.href
-  //     : allData[0].en.promotions[0].button.href;
-  // };
-
   const buttonText = () => {
     return currentLang[0] === "es"
       ? allData[0].es.promotions[0].button.text

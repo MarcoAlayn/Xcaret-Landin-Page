@@ -7,8 +7,8 @@ import Navbar from "../../components/Navbar";
 import Legals from "../../components/Legals";
 import Footer from "../../components/Footer";
 import Modal from "../../components/Modal";
-import "./landing.css";
 import Loader from "../../assets/loading.gif";
+import "./landing.css";
 
 function Landing() {
   const dispatch = useDispatch();
