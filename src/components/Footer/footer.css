@@ -205,15 +205,19 @@
   }
 
   .footerContainer .termsUse {
+    height: 2.2rem;
+    padding: 0.5rem 10.7rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
   }
 
   .footerContainer .termsUse .firstChild {
     font-size: calc(var(--font-size-text-xs) - 20%) !important ;
     margin-bottom: -0.9rem;
+    width: max-content;
   }
 
   .footerContainer .termsUse .secondChild :nth-child(1),
@@ -222,7 +226,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px 10px;
     font-size: calc(var(--font-size-text-xs) - 20%) !important ;
+    width: max-content;
+    translate: 5px;
   }
 }
