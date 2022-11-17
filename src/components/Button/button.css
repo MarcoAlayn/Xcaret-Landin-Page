@@ -17,23 +17,11 @@
   border: 1px solid rgb(255, 255, 255);
 }
 
-/* Pantallas grandes (desktops de menos de 1200px) */
-@media (max-width: 1199.98px) {
-}
-
-/* Pantallas medianas (tablets de menos de 992px) */
-@media (max-width: 991.98px) {
-}
-
-/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
-@media (max-width: 767.98px) {
-}
-
 /* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
 @media (max-width: 575.98px) {
   .buttonContainer a {
-    padding: 0.5rem 5.5rem;
+    padding: 0.5rem 6.4rem;
     border: 3px solid rgba(17, 17, 17);
-    font-size: calc(var(--font-size-text-button) - 50%);
+    font-size: calc(var(--font-size-text-button) - 20%) !important;
   }
 }
