@@ -1,18 +1,42 @@
 .navbarContainer {
   display: grid;
   grid-template-columns: auto 240px;
+  grid-template-areas: "brand optns";
   background: var(--background-gray-color);
   padding: 2rem 0rem;
 }
 .navbarContainer .brand {
+  grid-area: brand;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 25px;
 }
 .navbarContainer .OptionsContainer {
+  grid-area: optns;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
+}
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 575.98px) {
+  .navbarContainer {
+    grid-template-columns: auto 160px;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+  }
 }
