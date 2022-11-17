@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# TEST-FRONTEND
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Se requiere trabajar una landing page en la que se maquete la siguiente estructura
 
-## Available Scripts
+### mobile
+https://preview.uxpin.com/89197d8ab185db0334e15c58ec797fd33f56f1be#/pages/149929682/simulate/sitemap?mode=i
+### desktop
+https://preview.uxpin.com/89197d8ab185db0334e15c58ec797fd33f56f1be#/pages/149929671/simulate/sitemap?mode=i
 
-In the project directory, you can run:
+## Recursos
 
-### `npm start`
+- Se tendrá que hacer uso de react con <a href="https://nextjs.org/">nextjs</a>.
+- Toda la información de la landig, textos, imágenes, links, etc. se deberán consultar desde los siguientes endpoints.
+  - textos: https://raw.githubusercontent.com/javialcocer/test-json/main/data.json.
+- Deberás hacer uso de <a href="https://redux.js.org/">redux</a>.
+- Deberás usar <a href="https://tailwindcss.com/">tailwind</a> como libreria de css
+- Deberás usar la libreria react-device-detect para poder cargar la vista mobile o desktop según sea el caso https://www.npmjs.com/package/react-device-detect.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Consideraciones
+- Deberás inicializar el idioma de la landing en español haciendo uso del store de redux.
+- Dependiendo del store y el idioma deberás consultar la porción de textos correspondiente y guardar el lenguaje actual en el store.
+- Al darle clic generar un código de reserva aleatorio y mostrar un popup con el resumen de compra.
+- Al darle clic continuar en el popup, mostrar una thank you page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Qué se califica
+- Entregar liga de repositorio de tu prueba.
+- Entrega de versión desktop.
+- Entrega de versión mobile.
+- Uso de hooks.
+- Uso de redux.
+- Limpieza del código.
+- Tiempo de entrega.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## No te limites 
+- En esta sección ten la libertad de agregar los extras que consideres que pueden demostrar tus habilidades.
+  - Test de componentes.
+  - Creación de componentes sin uso de librerías externas.
+  - Deploy en servicios en la nube.
