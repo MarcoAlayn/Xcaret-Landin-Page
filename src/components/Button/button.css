@@ -31,4 +31,9 @@
 
 /* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
 @media (max-width: 575.98px) {
+  .buttonContainer a {
+    padding: 0.5rem 5.5rem;
+    border: 3px solid rgba(17, 17, 17);
+    font-size: calc(var(--font-size-text-button) - 50%);
+  }
 }

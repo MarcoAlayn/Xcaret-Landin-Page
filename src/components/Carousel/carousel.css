@@ -94,4 +94,13 @@
 
 /* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
 @media (max-width: 575.98px) {
+  .ContenedorPrincipal .contenedorSlideshow .slide {
+    max-height: 35vh;
+  }
+  .ContenedorPrincipal .contenedorSlideshow .slide img {
+    transform: translateY(-85px);
+  }
+  .ContenedorPrincipal .contenedorSlideshow .textoSlide {
+    display: none;
+  }
 }
