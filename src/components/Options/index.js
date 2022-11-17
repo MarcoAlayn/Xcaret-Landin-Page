@@ -43,10 +43,10 @@ const Options = () => {
     return langs[0] === "es" ? (
       <button onClick={handleSetEnglish}>
         {" "}
-        <a>en</a>{" "}
+        <a>eng</a>{" "}
       </button>
     ) : (
-      <button onClick={handleSetSpanish}>es</button>
+      <button onClick={handleSetSpanish}>esp</button>
     );
   };
 

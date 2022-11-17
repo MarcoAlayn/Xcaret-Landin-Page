@@ -73,7 +73,7 @@ function Footer() {
 
       <div className="termsUse">
         <p className="firstChild">{footer()?.copy}</p>
-        <div>
+        <div className="termGroup">
           <p className="secondChild">
             <a href={footer()?.links[1].href}>{footer()?.links[1].tittle}</a>
           </p>

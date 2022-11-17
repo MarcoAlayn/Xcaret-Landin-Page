@@ -125,31 +125,21 @@
   grid-area: term;
   background: var(--black-color);
   height: 2.2rem;
-
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-areas: "x A A A A B C z";
+  padding: 0rem 10.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footerContainer .termsUse .firstChild {
-  grid-area: A;
-  justify-content: flex-start;
-}
-.footerContainer .termsUse :nth-child(2) {
-  grid-area: B;
-  justify-content: flex-end;
-}
-.footerContainer .termsUse :nth-child(3) {
-  grid-area: C;
+.footerContainer .termsUse .termGroup {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.footerContainer .termsUse .firstChild,
-.footerContainer .termsUse :nth-child(2),
-.footerContainer .termsUse :nth-child(3) {
-  display: flex;
-  align-items: center;
+.footerContainer .termGroup p {
+  padding-left: 100px;
+  translate: -55px;
 }
 
 .footerContainer .contactMail,
