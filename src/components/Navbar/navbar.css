@@ -36,7 +36,6 @@
 @media (max-width: 575.98px) {
   .navbarContainer {
     grid-template-columns: auto 160px;
-    justify-content: space-between;
     padding: 1rem 0rem;
   }
 }
